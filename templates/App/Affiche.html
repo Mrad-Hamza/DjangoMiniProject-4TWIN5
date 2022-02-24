@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Nom Projet</th>
+        <th>Besoins</th>
+        <th>Createur</th>
+        <th>Etat</th>
+    </tr>
+<!-- DTL ychabah l twig ta symfony -->
+    {% for pp in p %}
+        <tr>
+            <td> {{ pp.nom_projet }}</td>
+            <td>{{ pp.besoins }}</td>
+            <td>{{ pp.createur }}</td>
+            <td>{{ pp.est_valide }}</td>
+        </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'Ajout' %}">Add</a>
+</body>
+</html>
